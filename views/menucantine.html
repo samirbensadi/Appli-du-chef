@@ -3,25 +3,28 @@
         <h1>YUM'S MENU</h1>
         <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back"></a>
     </div>
+    <div data-role="content" class="ui-content">
 
-    <div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="set">
 
-        <div data-role="collapsible" id="set1" data-collapsed="false">
+        <div data-role="collapsibleset" data-content-theme="a" data-iconpos="right" id="set">
 
-            <h3>EDIT MENU</h3>
-            <form method="POST" id="editMenu">
-                <input type="date" name="" value="">
-                <input type="text" name="entree" id="" placeholder="Entrée">
-                <input type="text" name="plat" id="" placeholder="plat du jour">
-                <input type="text" name="dessert" id="" placeholder="Dessert">
-                <button type="submit" id="" class="ui-btn  ui-btn-raised clr-primary" data-transition="slide">Edit</button>
-            </form>
+            <div data-role="collapsible" id="set1" data-collapsed="false">
 
+                <h3>EDIT MENU</h3>
+                <form method="POST" id="editMenu">
+                    <input type="date" name="" value="">
+                    <input type="text" name="entree" id="" placeholder="Entrée">
+                    <input type="text" name="plat" id="" placeholder="plat du jour">
+                    <input type="text" name="dessert" id="" placeholder="Dessert">
+                    <button type="submit" id="" class="ui-btn  ui-btn-raised clr-primary" data-transition="slide">Edit</button>
+                </form>
+
+            </div>
         </div>
+
+
+        <section data-role="content" class="ui-content" id="">
+            <p>ici le menu de la semaine</p>
+        </section>
     </div>
-
-
-    <section data-role="content" class="ui-content" id="">
-      <p>ici le menu de la semaine</p>
-    </section>
 </div>
