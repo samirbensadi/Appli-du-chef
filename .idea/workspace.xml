@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="873ca392-7448-462c-bedc-400ca5cb21d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/test.php" afterPath="$PROJECT_DIR$/php/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scan.js" afterPath="$PROJECT_DIR$/js/scan.js" />
     </list>
     <ignored path="Appli-du-chef.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +31,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="scan.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scan.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/scan.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -54,11 +53,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scan.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="scan.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/scan.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="51" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
+            <state relative-caret-position="342">
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -67,8 +66,8 @@
       <file leaf-file-name="functions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+            <state relative-caret-position="72">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
               <folding>
                 <element signature="e#0#39#0" expanded="false" />
               </folding>
@@ -100,8 +99,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/views/scan.html" />
         <option value="$PROJECT_DIR$/views/mainmenu.html" />
-        <option value="$PROJECT_DIR$/js/scan.js" />
         <option value="$PROJECT_DIR$/php/test.php" />
+        <option value="$PROJECT_DIR$/js/scan.js" />
       </list>
     </option>
   </component>
@@ -231,18 +230,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1485246156754</updated>
-      <workItem from="1485246158706" duration="7282000" />
+      <workItem from="1485246158706" duration="11000000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7282000" />
+    <option name="totallyTimeSpent" value="11000000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33443892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16749585" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6651481" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -317,22 +316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/scan.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="51" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/mainmenu.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -349,16 +332,6 @@
             <marker date="1485253431498" expanded="true" signature="330:387" placeholder="SELECT remem... admin" />
             <marker date="1485253431498" expanded="true" signature="1686:1724" placeholder="SELECT * FRO... admin" />
             <marker date="1485253431498" expanded="true" signature="2386:2424" placeholder="SELECT * FRO... admin" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -389,6 +362,32 @@
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#39#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/scan.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
