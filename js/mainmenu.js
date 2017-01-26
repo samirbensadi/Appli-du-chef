@@ -1,9 +1,10 @@
 $(document).on("pagecreate", "#mainmenu", function() {
 
-    $('#logOut').on('tap', function() {
-        $.mobile.changePage("../index.html", {
-            transition: "slide",
-            reverse: true
-        });
-    })
-})
+  $('#logOut').on('tap', function () {
+      $.ajax({
+          method: "POST",
+          url: 'http://' + server + '/php/log_out.php'
+      });
+      disconnect();
+  });
+});

@@ -1,6 +1,3 @@
-/**
- * Created by coda on 24/01/17.
- */
 var server = "localhost/Appli-du-chef";
 
 // fonction pour quitter le service
