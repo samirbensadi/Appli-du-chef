@@ -19,7 +19,7 @@ function checkRemToken($base)
     // si le resultat est different de false (càd si le token existe déjà dans la bdd)
     if ($result_token != false) {
         checkRemToken($base);
-    } else { // sinon (si le resultat vaut false,
+    } else {  // sinon (si le resultat vaut false,
         return $token_string; // on renvoit le token généré
     }
 }
@@ -52,7 +52,7 @@ function reconnect(){
     }
 
     if(isset($_COOKIE['remember']) && !isset($_SESSION['auth']) ){
-        require_once 'inc/db.php';
+        require_once 'db_admin.php';
 
         $remember_token = $_COOKIE['remember'];
         $parts = explode('==', $remember_token);
@@ -77,7 +77,7 @@ function reconnect(){
 
 //rafraichir les variables de session
 function refreshSession() {
-    require 'db.php';
+    require 'db_admin.php';
 
     $req=$bdd->prepare('SELECT * FROM admin WHERE id_admin = ?');
     $req->execute([$_SESSION['auth']->id_admin]);
