@@ -1,10 +1,21 @@
-$(document).on("deviceready", function () {
-    // QRScanner.prepare(function (err, status) {
-    //
-    // });
-    
-    
+document.addEventListener('deviceready', function () {
+    QRScanner.prepare(function (err, status) {
+        if (err) {
+            toast(err, 5000);
+        }
+        if (status.authorized) {
+            toast('ok !!',3000);
+
+        } else if (status.denied) {
+
+        } else {
+
+        }
+    });
+
 });
+
+
 
 
 
@@ -42,17 +53,16 @@ $(document).on("pagecreate", "#home", function() {
                         localStorage.setItem('remember', true);
                         $.mobile.changePage("views/mainmenu.html",{transition : "slide", reverse: false}); // je charge la page 2
                     } else {
-                        $("#alertErreur").popup("open","fade"); // php n'a pas reçu les bonnes infos
+                        toast("L'identifiant n'existe pas ou le mot de passe est incorrect.", 5000); // php n'a pas reçu les bonnes infos
                     }
                 },
                 error: function () {
-                    $("#alertCo").popup("open","fade"); // erreur de liaison avec le serveur
+                    toast("<b>Erreur</b> : l'envoi a échoué. Vérifiez votre connexion.", 5000); // erreur de liaison avec le serveur
                 }
             });
-            
 
         } else {
-            $("#alertmdp").popup("open","fade"); // champs incomplets
+            toast("Le mot de passe doit contenir au moins 6 caractères.", 5000);
         }
     });
 });

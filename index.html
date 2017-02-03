@@ -10,18 +10,38 @@
     <link rel="stylesheet" href="css/bower_components/nativeDroid2/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" type="text/css" href="css/bower_components/nativeDroid2/css/flexboxgrid.min.css">
 
-
-
     <!--NativeDroid2 CSS color-->
     <link rel="stylesheet" type="text/css" href="css/bower_components/nativeDroid2/css/nativedroid2.color.blue-grey.css">
 
     <!--Main CSS-->
     <link rel="stylesheet" type="text/css" href="css/index.css">
 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Yummy admin</title>
+</head>
+
+<body style="background-color: transparent">
+    <div data-role="page" id="home">
+        <div data-role="header" id="headAccueil" data-position="fixed">
+            <h1>YUMMY ADMIN</h1>
+        </div>
+        <div data-role="content" class="ui-content">
+            <form method="POST" id="formConnexion">
+                <h3>Connexion</h3>
+                <input type="text" name="login" id="login" placeholder="Identifiant">
+                <input type="password" name="mdp" id="mdp" placeholder="Mot de passe">
+                <button type="submit"  id="btnCo" class="ui-btn  ui-btn-raised clr-primary">Connexion</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
     <!--Jquery mobile JS-->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/jquery.mobile-1.4.5.min.js"></script>
-    <!-- <script type="text/javascript" src="js/jquery.qrcode.min.js"></script> -->
 
     <!--NativeDroid JS-->
     <script type="text/javascript" src="css/bower_components/nativeDroid2/js/nativedroid2.js"></script>
@@ -32,57 +52,7 @@
     <script type="text/javascript" src="js/mainmenu.js"></script>
     <script type="text/javascript" src="js/scanner/jsqrscanner.nocache.js"></script>
     <script type="text/javascript" src="js/scan.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Yummy admin</title>
-</head>
 
-<body>
-    <div data-role="page" id="home">
-        <div data-role="header" id="headAccueil" data-position="fixed">
-            <h1>YUMMY ADMIN</h1>
-        </div>
-        <div data-role="content" class="ui-content">
-            <form method="POST" id="formConnexion">
-                <h3>Connexion</h3>
-                <input type="text" name="login" id="login" placeholder="Identifiant">
-                <input type="password" name="mdp" id="mdp" placeholder="Mot de passe">
-                <button type="submit"  id="btnCo" class="ui-btn  ui-btn-raised clr-primary" data-transition="slide">Connexion</button>
-            </form>
-
-
-
-            <!-- POP-UPS D'ALERTE -->
-
-            <!-- champs incomplet -->
-            <div data-role="popup" id="alertmdp" data-overlay-theme="b">
-                <div data-role="content" class="ui-content">
-                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-                    <p>Merci d'entrer correctement vos identifiants.<br> Le mot de passe doit contenir au moins 4 caractères.
-                    </p>
-                </div>
-            </div>
-
-            <!-- mauvais mot de passe ou identifiant inexistant -->
-            <div data-role="popup" id="alertErreur" data-overlay-theme="b">
-                <div data-role="content" class="ui-content">
-                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-                    <p>L'identifiant n'existe pas ou le mot de passe est incorrect.
-                    </p>
-                </div>
-            </div>
-
-            <!-- impossible de se connecter -->
-            <div data-role="popup" id="alertCo" data-overlay-theme="b">
-                <div data-role="content" class="ui-content">
-                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
-                    <p> <b>Erreur</b> : l'envoi a échoué. Vérifiez votre connexion.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
 </body>
 
 </html>

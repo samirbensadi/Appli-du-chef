@@ -1,20 +1,10 @@
 .ui-btn {
-  margin-top: 1em;
+  margin: 0.5em 0;
 }
 
 a {
   text-decoration: none;
 }
 
-.content2 {
-  display: flex;
-}
 
-.nd2-card {
-  width: 50%;
-  padding: 1em;
-
-  background: rgba(96, 125, 139, 0.71);
-  color: white;
-}
 
