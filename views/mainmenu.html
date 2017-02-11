@@ -3,26 +3,24 @@
     <div data-role="header" id="headMainMenu" data-position="fixed">
         <h1>YUMMY ADMIN</h1>
         <a id="logOut" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power"></a>
+        <a id="refreshBtn" class="ui-btn ui-corner-all ui-btn-inline ui-mini header-button-left ui-btn-icon-right zmdi zmdi-refresh"></a>
     </div>
     <div data-role="content" class="ui-content">
 
 
-        <div class="nd2-card">
-            <h3>Effectifs journaliers</h3>
-            <div class="card-supporting-text">
-                <p>Ici le nombre de personnes ayant confirmé leur présence</p>
+        <div class="nd2-card" id="presenceDiv">
+          <div class="card-title">
+            <h4 class="card-primary-title">Liste de présence</h4>
+          </div>
+            <div class="card-supporting-text" id="presenceText">
             </div>
         </div>
 
-        <a id="scan" class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="scan.html">scan QR code</a>
-        <a id="menuBtn" class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="menucantine.html">Menu de la semaine</a>
-        <a id="stat" class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="statistiques.html">Statistiques</a>
-
-
-
-
-
-
+        <a class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="scan.html">Scanner</a>
+        <a class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="menucantine.html">Menu de la semaine</a>
+        <a class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="releves.html">Relevés</a>
+        <a class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="statistiques.html">Statistiques</a>
+        <a class="ui-btn  ui-btn-raised clr-primary" data-transition="slide"href="recherche.html">Recherche</a>
 
     </div>
 

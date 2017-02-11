@@ -1,5 +1,5 @@
 <?php
-
+header('Content-Type: application/json');
 require 'inc/functions.php';
 reconnect();
 logged_only();

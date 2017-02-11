@@ -5,21 +5,23 @@
     </div>
     <div data-role="content" class="ui-content">
 
-            <div class="nd2-card" style="min-width:900px;">
+            <div>
 
                 <h3>Éditer le menu</h3>
                 <form method="POST" id="editMenu">
-                    <input type="date" name="" value="">
-                    <input type="text" name="entree" id="" placeholder="Entrée">
-                    <input type="text" name="plat" id="" placeholder="Plat du jour">
-                    <input type="text" name="dessert" id="" placeholder="Dessert">
-                    <button type="submit" id="" class="ui-btn  ui-btn-raised clr-primary" >Enregistrer</button>
+                    <input type="date" name="dateMenu" required>
+                    <input type="text" name="entree"  placeholder="Entrée" required>
+                    <input type="text" name="plat" placeholder="Plat du jour" required>
+                    <input type="text" name="dessert" placeholder="Dessert" required>
+                    <button type="submit" class="ui-btn ui-btn-raised clr-primary">Enregistrer</button>
                 </form>
 
             </div>
 
             <!--affichage des menus-->
-            <div></div>
+            <div id="displayMenu" style="overflow:scroll">
+
+            </div>
 
     </div>
 </div>

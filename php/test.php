@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: coda
- * Date: 24/01/17
- * Time: 10:34
- */
+
 if (!empty($_GET['mdp'])) {
     $mdp = $_GET['mdp'];
 
@@ -12,5 +7,11 @@ if (!empty($_GET['mdp'])) {
     echo $mdp_hash;
 
 }
+
+// require 'inc/db_app.php';
+//
+//   $req4 = $bdd->prepare('INSERT INTO presence(date_presence, couleurTicket, id_client) VALUES(CURDATE(), :couleurTicket, :id_client)');
+//   $req4->execute(["couleurTicket" => "pourpre", "id_client" => "5" ]);
+//
 
 ?>

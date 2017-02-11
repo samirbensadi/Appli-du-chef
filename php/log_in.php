@@ -1,5 +1,6 @@
 <?php
 header("Access-Control-Allow-Origin : *"); // pour que tout le monde puisse interroger ce script
+header('Content-Type: application/json');
 
 
 if (isset($_POST['login'], $_POST['mdp']) && !empty($_POST['login']) && !empty($_POST['mdp'])) { // si le login et le mot de passe ont bien été envoyés
@@ -45,4 +46,3 @@ send_json($reponse);
 
 
 ?>
-

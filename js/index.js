@@ -1,7 +1,7 @@
 document.addEventListener('deviceready', function () {
     QRScanner.prepare(function (err, status) {
         if (err) {
-            toast(err, 5000);
+            alert("Erreur : " + err);
         }
         if (status.authorized) {
             toast('ok !!',3000);
@@ -15,20 +15,14 @@ document.addEventListener('deviceready', function () {
 
 });
 
-
-
-
-
-
 $(document).on("pagecreate", "#home", function() {
 
     if (localStorage.remember) {
         $.ajax({
-            url: "http://" + server + '/php/reconnect.php',
+            url: "http://" + server + 'reconnect.php',
             success: function (data) {
-                var requete = JSON.parse(data);
-                console.log(requete);
-                if (requete.reponse == true) {
+                console.log(data);
+                if (data.reponse == true) {
                     $.mobile.changePage("views/mainmenu.html", {transition: "slide", reverse: false});
                 } else {
                     disconnect();
@@ -44,12 +38,11 @@ $(document).on("pagecreate", "#home", function() {
 
             $.ajax({
                 method: "POST",
-                url : 'http://' + server + '/php/log_in.php', // envoi vers ce script
+                url : 'http://' + server + 'log_in.php', // envoi vers ce script
                 data: $('#formConnexion').serialize() ,
                 success: function (data) { // en cas de succes
-                    var requete = JSON.parse(data); // parser la reponse json
-                    console.log(requete);
-                    if (requete.reponse == true) { // si la reponse vaut true
+                    console.log(data);
+                    if (data.reponse == true) { // si la reponse vaut true
                         localStorage.setItem('remember', true);
                         $.mobile.changePage("views/mainmenu.html",{transition : "slide", reverse: false}); // je charge la page 2
                     } else {
