@@ -19,8 +19,8 @@ if (!empty($_POST['dateMenu']) && !empty($_POST['entree']) && !empty($_POST['pla
       $req->closeCursor();
       $reponse = array('reponse' => "updated");
     } else {
-      $req = $bdd->prepare('INSERT INTO menus(entree, plat, dessert, date_menu) VALUES(:entree, :plat, :dessert, CURDATE())');
-      $req->execute(["entree" => $_POST['entree'], "plat" => $_POST['plat'], "dessert" => $_POST['dessert']]);
+      $req = $bdd->prepare('INSERT INTO menus(entree, plat, dessert, date_menu) VALUES(:entree, :plat, :dessert, :date_menu)');
+      $req->execute(["entree" => $_POST['entree'], "plat" => $_POST['plat'], "dessert" => $_POST['dessert'], "date_menu" => $_POST['dateMenu']]);
       $req->closeCursor();
       $reponse = array('reponse' => true);
     }
