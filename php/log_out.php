@@ -1,5 +1,5 @@
 <?php
-
+header("Access-Control-Allow-Origin : *"); // pour que tout le monde puisse interroger ce script
 if(isset($_SESSION['auth'])){
     unset($_SESSION['auth']);
 }
