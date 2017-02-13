@@ -13,5 +13,5 @@ if (!empty($_GET['mdp'])) {
 //   $req4 = $bdd->prepare('INSERT INTO presence(date_presence, couleurTicket, id_client) VALUES(CURDATE(), :couleurTicket, :id_client)');
 //   $req4->execute(["couleurTicket" => "pourpre", "id_client" => "5" ]);
 //
-
-?>
+//
+// ?>
