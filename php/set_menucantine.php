@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin : *"); // pour que tout le monde puisse interroger ce script
 header('Content-Type: application/json');
 require_once 'inc/functions.php';
 
