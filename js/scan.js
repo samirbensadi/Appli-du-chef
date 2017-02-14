@@ -8,28 +8,34 @@ $(document).on('pagecreate', "#scan", function () {
         } else {
             var liste = JSON.parse(localStorage.liste);
 
+
             for (var i = 0; i < liste.length; i++) {
                 if (liste[i].codeQR == text) {
-                    i = liste.length + 1;
+
+
                     $('#infosDate').text(liste[i].date_presence);
                     $('#infosCode').text(liste[i].codeQR);
-                    $('#infosNum').text(liste[i].num);
+                    $('#infosNum').text(liste[i].id_client);
                     $('#infosNom').text(liste[i].nom);
                     $('#infosPrenom').text(liste[i].prenom);
                     $('#infosFormation').text(liste[i].formation);
                     $('#infosStatut').text(liste[i].id_statut);
                     $('#infosCouleur').text(liste[i].couleurTicket);
+                    var found = true;
+                    // and then
+                    i = liste.length + 1;
+                    $('#scanUnknown').hide();
+                    $('#scanInfo').fadeIn('fast');
+
                 }
             }
 
-            // while (trouve == false || i < liste.length) {
-            //   if (liste[i].codeQR == text) {
-            //     alert("yes !");
-            //     trouve = true;
-            //   } else {
-            //     i++;
-            //   }
-            // }
+
+            if (!found) {
+                $('#scanInfo').hide();
+                $('#scanUnknown').fadeIn('fast');
+            }
+
             scan();
         }
     });
