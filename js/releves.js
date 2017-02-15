@@ -1,25 +1,31 @@
 $(document).on('pagecreate', '#releves', function () {
 
-    var liste = JSON.parse(localStorage.liste);
+  if (!localStorage.liste) {
+    $('#presenceP').text("Aucune liste de présence n'est enregistrée aujourd'hui.");
+  } else {
+      var liste = JSON.parse(localStorage.liste);
 
-    var totalJaune = 0, totalVert = 0, totalRose = 0;
+      var totalJaune = 0, totalVert = 0, totalRose = 0;
 
-    for (var i = 0; i < liste.length; i++) {
-        if (liste[i].couleurTicket == "jaune") {
-            totalJaune++;
-        }
-        if (liste[i].couleurTicket == "vert") {
-            totalVert++;
-        }
-        if (liste[i].couleurTicket == "rose") {
-            totalRose++;
-        }
-    }
+      for (var i = 0; i < liste.length; i++) {
+          if (liste[i].couleurTicket == "jaune") {
+              totalJaune++;
+          }
+          if (liste[i].couleurTicket == "vert") {
+              totalVert++;
+          }
+          if (liste[i].couleurTicket == "rose") {
+              totalRose++;
+          }
+      }
 
-    console.log(totalJaune + " " + totalVert + " " + totalRose);
-    $('#totalJaune').text(totalJaune);
-    $('#totalVert').text(totalVert);
-    $('#totalRose').text(totalRose);
+      console.log(totalJaune + " " + totalVert + " " + totalRose);
+      $('#totalJaune').text(totalJaune);
+      $('#totalVert').text(totalVert);
+      $('#totalRose').text(totalRose);
+  }
+
+
 
 
 
@@ -31,13 +37,15 @@ $(document).on('pagecreate', '#releves', function () {
             method: "POST",
             data: $('#formReleveVente').serialize(),
             success: function (data) {
-                console.log(data);
+                // console.log(data);
                 if (data.reponse == "disconnect") {
                     disconnect();
                 } else if (data.reponse == "noticket") {
                     toast("Aucun ticket n'a été vendu dans cette plage.", 5000);
-                } else {
+                } else if (data.reponse == false) {
                     toast("Erreur serveur", 5000);
+                } else {
+                    $('#relevesContent').append('<iframe src="http://' + server + 'test.pdf" style="height: 500px;width: 400px;overflow: scroll;"></iframe>');
                 }
 
             },

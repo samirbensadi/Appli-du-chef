@@ -8,11 +8,8 @@ $(document).on('pagecreate', "#scan", function () {
         } else {
             var liste = JSON.parse(localStorage.liste);
 
-
             for (var i = 0; i < liste.length; i++) {
                 if (liste[i].codeQR == text) {
-
-
                     $('#infosDate').text(liste[i].date_presence);
                     $('#infosCode').text(liste[i].codeQR);
                     $('#infosNum').text(liste[i].id_client);
@@ -26,16 +23,13 @@ $(document).on('pagecreate', "#scan", function () {
                     i = liste.length + 1;
                     $('#scanUnknown').hide();
                     $('#scanInfo').fadeIn('fast');
-
                 }
             }
-
 
             if (!found) {
                 $('#scanInfo').hide();
                 $('#scanUnknown').fadeIn('fast');
             }
-
             scan();
         }
     });
@@ -45,7 +39,7 @@ $(document).on('pagecreate', "#scan", function () {
     QRScanner.show();
     scan();
   } else {
-    toast("<b>Erreur : </b>, impossible de trouver la liste de présence");
+    toast("<b>Erreur : </b>, impossible de trouver la liste de présence", 5000);
   }
 
 });
