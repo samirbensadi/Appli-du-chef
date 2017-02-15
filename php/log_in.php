@@ -11,7 +11,7 @@ if (isset($_POST['login'], $_POST['mdp']) && !empty($_POST['login']) && !empty($
     require 'inc/functions.php';
 
 
-    $req=$bdd->prepare('SELECT * FROM admin WHERE identifiant = ?');
+    $req=$bdd_admin->prepare('SELECT * FROM admin WHERE identifiant = ?');
     $req->execute([$login]);
     $user = $req->fetch();
 
@@ -23,8 +23,8 @@ if (isset($_POST['login'], $_POST['mdp']) && !empty($_POST['login']) && !empty($
         $_SESSION['auth'] = $user; // on enregistre l'objet de l'utilisateur dans une variable de session
 
         // on fabrique un cookie pour se reconnecter automatiquement
-        $remToken = checkRemToken($bdd); // fabrication du token remember
-        $req2 = $bdd->prepare('UPDATE admin SET remember_token = ? WHERE id_admin = ?');
+        $remToken = checkRemToken($bdd_app); // fabrication du token remember
+        $req2 = $bdd_app->prepare('UPDATE admin SET remember_token = ? WHERE id_admin = ?');
         $req2->execute([$remToken, $user->id_admin]);
 
         setcookie('remember', $user->id_admin . '==' . $remToken . sha1($user->id_admin . 'palpatine'), time() + 60 * 60 * 24 * 30);

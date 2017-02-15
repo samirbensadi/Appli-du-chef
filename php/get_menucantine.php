@@ -7,7 +7,7 @@ reconnect();
 logged_only();
 
 require 'inc/db_app.php';
-$req = $bdd->prepare('SELECT * FROM menus ORDER BY date_menu DESC LIMIT 10');
+$req = $bdd_app->prepare('SELECT * FROM menus ORDER BY date_menu DESC LIMIT 10');
 $req->execute();
 $result = $req->fetchAll();
 

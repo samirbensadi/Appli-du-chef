@@ -5,7 +5,7 @@ reconnect();
 logged_only();
 
 require 'inc/db_app.php';
-$req = $bdd->prepare('SELECT * FROM vente WHERE date_vente'); 
+$req = $bdd_app->prepare('SELECT * FROM vente WHERE date_vente'); 
 $req->execute()
 $req->fetchAll();
 
