@@ -5,13 +5,12 @@
     </div>
 
     <div data-role="content" class="ui-content" id="relevesContent">
-         <div>
+         <div id="releveConso">
             <h3>Nombre de tickets consommés aujourd'hui</h3>
               <p id="presenceP">Tickets jaunes : <span id="totalJaune"></span> - Tickets verts : <span id="totalVert"></span> - Tickets roses : <span id="totalRose"></span></p>
-              <button type="" id="downloadPresence" class="ui-btn  ui-btn-raised clr-primary">Télécharger le pdf</button>
          </div>
 
-         <div>
+         <div id="releveVente">
            <h3> Totaux des tickets vendus par couleur</h3>
             <form method="POST" action="#" id="formReleveVente">
                 <input type="date" name="dateMin" required>
@@ -19,7 +18,7 @@
                 <button type="submit" id="downloadVente" class="ui-btn  ui-btn-raised clr-primary">Télécharger le pdf</button>
             </form>
 
-
+             <iframe src="http://localhost/Appli-du-chef/php/test.php" style="height: 500px;width: 400px;overflow: scroll;"></iframe>
          </div>
     </div>
 </div>

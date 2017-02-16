@@ -1,0 +1,3 @@
+caca;pipi;popo
+fruit;banane;fraise
+camion;voiture;avion

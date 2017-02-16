@@ -23,6 +23,7 @@ $(document).on('pagecreate', '#releves', function () {
       $('#totalJaune').text(totalJaune);
       $('#totalVert').text(totalVert);
       $('#totalRose').text(totalRose);
+      $('#releveConso').append('<button type="" id="downloadPresence" class="ui-btn ui-btn-raised clr-primary">Télécharger le pdf</button>');
   }
 
 
@@ -34,7 +35,7 @@ $(document).on('pagecreate', '#releves', function () {
 
         $.ajax({
             url: 'http://' + server + 'get_ventes.php',
-            method: "POST",
+            method: "GET",
             data: $('#formReleveVente').serialize(),
             success: function (data) {
                 // console.log(data);
@@ -45,7 +46,7 @@ $(document).on('pagecreate', '#releves', function () {
                 } else if (data.reponse == false) {
                     toast("Erreur serveur", 5000);
                 } else {
-                    $('#relevesContent').append('<iframe src="http://' + server + 'test.pdf" style="height: 500px;width: 400px;overflow: scroll;"></iframe>');
+                    $('#relevesContent').append('<iframe src="http://' + server + 'test.php" style="height: 500px;width: 400px;overflow: scroll;"></iframe>');
                 }
 
             },
