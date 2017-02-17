@@ -17,6 +17,7 @@ $(document).on("pagecreate", "#mainmenu", function() {
                   disconnect();
                 } else if (data.reponse == false) {
                   $("#presenceText").text("La liste est vide.");
+                    localStorage.removeItem("liste");
                 } else {
                     $('#presenceText').text("La liste comprend actuellement " + data.length + " personnes.");
                     localStorage.setItem("liste", JSON.stringify(data));

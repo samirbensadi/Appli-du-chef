@@ -45,9 +45,10 @@ $(document).on('pagecreate', '#releves', function () {
                     toast("Aucun ticket n'a été vendu dans cette plage.", 5000);
                 } else if (data.reponse == false) {
                     toast("Erreur serveur", 5000);
-                } else {
-                    $('#relevesContent').append('<iframe src="http://' + server + 'test.php" style="height: 500px;width: 400px;overflow: scroll;"></iframe>');
                 }
+                // } else {
+                //     // $('#relevesContent').append('<iframe src="http://' + server + 'test.php" style="height: 500px;width: 400px;overflow: scroll;"></iframe>');
+                // }
 
             },
             error: function () {

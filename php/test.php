@@ -22,17 +22,6 @@ if (!empty($_GET['mdp'])) {
 //$PDF->Text(40,10, "Mon texte");
 //$PDF->Output();
 
-function LoadData($file)
-{
-    // Lecture des lignes du fichier
-    $lines = file($file);
-    $data = array();
-    foreach($lines as $line)
-        $data[] = explode(';',trim($line));
-    return $data;
-}
 
-$data = LoadData('fichier.txt');
-var_dump($data);
 
  ?>
