@@ -14,14 +14,4 @@ if (!empty($_GET['mdp'])) {
 //   $req4->execute(["couleurTicket" => "pourpre", "id_client" => "5" ]);
 
 
-
-//require 'inc/fpdf.php';
-//$PDF = new FPDF();
-//$PDF->AddPage();
-//$PDF->SetFont('Arial', 'B',16);
-//$PDF->Text(40,10, "Mon texte");
-//$PDF->Output();
-
-
-
- ?>
+?>

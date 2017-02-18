@@ -7,14 +7,25 @@
     </div>
     <div data-role="content" class="ui-content">
 
+        <div class="ui-grid-a">
 
-        <div class="nd2-card" id="presenceDiv">
-          <div class="card-title">
-            <h4 class="card-primary-title">Liste de présence</h4>
-          </div>
-            <div class="card-supporting-text" id="presenceText">
+            <div class="ui-block-a" id="presenceDiv">
+              <!--<div class="card-title">-->
+                <h4 class="">Liste de présence</h4>
+              <!--</div>-->
+                <div class="" id="presenceText">
+                </div>
             </div>
-        </div>
+
+            <div class="ui-block-b" id="settingHour">
+                <h4 class="">Horaires de confirmation</h4>
+                <form method="POST" action="#" id="hourForm">
+                    <input type="time" name="hourStart" value="" placeholder="Heure de début" required>
+                    <input type="time" name="hourEnd" value="" placeholder="Heure de fin" required>
+                    <button class="ui-btn clr-primary" type="submit">Enregistrer</button>
+                </form>
+            </div>
+    </div>
 
         <a class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="scan.html">Scanner</a>
         <a class="ui-btn  ui-btn-raised clr-primary" data-transition="slide" href="menucantine.html">Menu de la semaine</a>

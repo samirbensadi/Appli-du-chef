@@ -36,4 +36,27 @@ $(document).on("pagecreate", "#mainmenu", function() {
     updateMain();
   });
 
+  $('#hourForm').on('submit', function (event) {
+      event.preventDefault();
+      $.ajax({
+          url: 'http://' + server + 'set_hours.php',
+          method: 'GET',
+          data: $(this).serialize(),
+          success: function (data) {
+              console.log(data);
+              if (data.reponse == "disconnect") {
+                  disconnect();
+              } else if (data.reponse == false) {
+
+              } else {
+
+              }
+
+          },
+          error: function () {
+              toast("<b>Erreur</b> : l'envoi a échoué. Vérifiez votre connexion.", 5000); // erreur de liaison avec le serveur
+       }
+      });
+  });
+
 });
