@@ -9,3 +9,16 @@ a {
 button:focus{
   outline: none;
 }
+
+
+@keyframes coloranim {
+  from{
+    background-color: #009688;
+  }
+  50%{
+    background-color: green;
+  }
+  to{
+    background-color: #009688;
+  }
+}

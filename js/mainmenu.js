@@ -29,6 +29,21 @@ $(document).on("pagecreate", "#mainmenu", function() {
                 $("#presenceText").text("Erreur de chargement.");
             }
         });
+
+
+      $.ajax({
+          url: 'http://' + server + 'get_horaires.php',
+          success: function (data) {
+              console.log(data);
+              if (data.reponse == true) {
+               $('#hourStart').val(data.start);
+               $('#hourEnd').val(data.end);
+              }
+          },
+          error: function () {
+              toast("<b>Erreur</b> : impossible d'afficher les horaires.", 5000); // erreur de liaison avec le serveur
+          }
+      });
   }
   updateMain();
 
@@ -39,7 +54,7 @@ $(document).on("pagecreate", "#mainmenu", function() {
   $('#hourForm').on('submit', function (event) {
       event.preventDefault();
       $.ajax({
-          url: 'http://' + server + 'set_hours.php',
+          url: 'http://' + server + 'set_horaires.php',
           method: 'GET',
           data: $(this).serialize(),
           success: function (data) {
@@ -47,9 +62,9 @@ $(document).on("pagecreate", "#mainmenu", function() {
               if (data.reponse == "disconnect") {
                   disconnect();
               } else if (data.reponse == false) {
-
+                toast("<b>Erreur</b> : Le serveur n'a recu aucune donnée.", 5000);
               } else {
-
+                toast("Horaires mis à jour !",5000);
               }
 
           },

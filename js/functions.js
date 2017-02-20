@@ -19,3 +19,11 @@ function toast(msg, time) {
         ttl : time // optional, time-to-live in ms (default: 3000)
     });
 }
+
+$(document).ajaxStart(function () {
+    $('.ui-page-theme-a .ui-header').css('animation', 'coloranim 1s infinite');
+});
+
+$(document).ajaxComplete(function () {
+    $('.ui-page-theme-a .ui-header').css('animation', 'none');
+});
