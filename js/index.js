@@ -55,7 +55,7 @@ $(document).on("pagecreate", "#home", function() {
             });
 
         } else {
-            toast("Le mot de passe doit contenir au moins 6 caractères.", 5000);
+            toast("Le mot de passe doit contenir au moins 4 caractères.", 5000);
         }
     });
 });

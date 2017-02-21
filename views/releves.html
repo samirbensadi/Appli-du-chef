@@ -1,5 +1,5 @@
 <div data-role="page" id="releves">
-    <div data-role="header" id="headStat">
+    <div data-role="header" id="headStat" data-position="fixed" data-tap-toggle="false">
         <h1>Relevés</h1>
         <a href="#" class="ui-btn ui-icon-back ui-btn-icon-left" data-rel="back"></a>
     </div>
@@ -11,13 +11,12 @@
          </div>
 
          <div id="releveVente">
-           <h3> Totaux des tickets vendus par couleur</h3>
+           <h3>Totaux des tickets vendus par couleur</h3>
             <form method="POST" action="#" id="formReleveVente">
-                <input type="date" name="dateMin" required>
-                <input type="date" name="dateMax" required>
-                <button type="submit" id="downloadVente" class="ui-btn  ui-btn-raised clr-primary">Télécharger le pdf</button>
+                <input type="date" name="dateMin" id="dateMin" value="" required>
+                <input type="date" name="dateMax" id="dateMax" value="" required>
+                <a href="#" id="downloadVente" class="ui-btn ui-btn-inline clr-primary" target="_blank">Télécharger le pdf</a>
             </form>
-
          </div>
     </div>
 </div>

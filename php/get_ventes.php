@@ -45,6 +45,8 @@ if (!empty($_GET['dateMin']) && !empty($_GET['dateMax'])) {
             }
         }
 
+
+
         // En-tête
         function Header()
         {

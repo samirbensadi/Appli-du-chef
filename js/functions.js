@@ -27,3 +27,4 @@ $(document).ajaxStart(function () {
 $(document).ajaxComplete(function () {
     $('.ui-page-theme-a .ui-header').css('animation', 'none');
 });
+

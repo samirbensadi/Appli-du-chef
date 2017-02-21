@@ -18,6 +18,9 @@ $(document).on("pagecreate", "#mainmenu", function() {
                 } else if (data.reponse == false) {
                   $("#presenceText").text("La liste est vide.");
                     localStorage.removeItem("liste");
+                } else if (data.length == 1){
+                    $('#presenceText').text("La liste comprend actuellement " + data.length + " personne.");
+                    localStorage.setItem("liste", JSON.stringify(data));
                 } else {
                     $('#presenceText').text("La liste comprend actuellement " + data.length + " personnes.");
                     localStorage.setItem("liste", JSON.stringify(data));
@@ -51,6 +54,7 @@ $(document).on("pagecreate", "#mainmenu", function() {
     updateMain();
   });
 
+    
   $('#hourForm').on('submit', function (event) {
       event.preventDefault();
       $.ajax({

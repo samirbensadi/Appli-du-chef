@@ -23,39 +23,18 @@ $(document).on('pagecreate', '#releves', function () {
       $('#totalJaune').text(totalJaune);
       $('#totalVert').text(totalVert);
       $('#totalRose').text(totalRose);
-      $('#releveConso').append('<button type="" id="downloadPresence" class="ui-btn ui-btn-raised clr-primary">Télécharger le pdf</button>');
+      $('#releveConso').append('<button type="" id="downloadPresence" class="ui-btn ui-btn-inline clr-primary">Télécharger le pdf</button>');
   }
 
 
+   $('#formReleveVente').on('change', function (event) {
+       // event.preventDefault();
+       console.log("connard");
+       var dateMin = $('#dateMin').val();
+       var dateMax = $('#dateMax').val();
 
+       $('#downloadVente').prop('href', 'http://' + server + 'get_ventes.php?dateMin=' + dateMin + '&dateMax=' + dateMax);
 
-
-    $('#formReleveVente').on('submit', function (event) {
-        event.preventDefault();
-
-        $.ajax({
-            url: 'http://' + server + 'get_ventes.php',
-            method: "GET",
-            data: $('#formReleveVente').serialize(),
-            success: function (data) {
-                // console.log(data);
-                if (data.reponse == "disconnect") {
-                    disconnect();
-                } else if (data.reponse == "noticket") {
-                    toast("Aucun ticket n'a été vendu dans cette plage.", 5000);
-                } else if (data.reponse == false) {
-                    toast("Erreur serveur", 5000);
-                }
-                // } else {
-                //     // $('#relevesContent').append('<iframe src="http://' + server + 'test.php" style="height: 500px;width: 400px;overflow: scroll;"></iframe>');
-                // }
-
-            },
-            error: function () {
-                toast("<b>Erreur</b> : l'envoi a échoué. Vérifiez votre connexion.", 5000); // erreur de liaison avec le serveur
-                $("#presenceText").text("Erreur de chargement.");
-            }
-        });
 
     });
 

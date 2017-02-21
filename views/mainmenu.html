@@ -1,6 +1,6 @@
 <!-- Page menu principal -->
 <div data-role="page" id="mainmenu">
-    <div data-role="header" id="headMainMenu" data-position="fixed">
+    <div data-role="header" id="headMainMenu" data-position="fixed" data-tap-toggle="false">
         <h1>YUMMY ADMIN</h1>
         <a id="logOut" class="ui-btn ui-corner-all ui-btn-inline ui-mini footer-button-left ui-btn-icon-left ui-icon-power"></a>
         <a id="refreshBtn" class="ui-btn ui-corner-all ui-btn-inline ui-mini header-button-left ui-btn-icon-right zmdi zmdi-refresh"></a>
@@ -22,7 +22,7 @@
                 <form method="POST" action="#" id="hourForm">
                     <input type="time" name="hourStart" value="" id="hourStart" placeholder="Heure de début" required>
                     <input type="time" name="hourEnd" value="" id="hourEnd" placeholder="Heure de fin" required>
-                    <button class="ui-btn clr-primary" type="submit">Enregistrer</button>
+                    <button class="ui-btn ui-btn-inline clr-primary" type="submit">Enregistrer</button>
                 </form>
             </div>
     </div>
