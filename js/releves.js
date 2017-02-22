@@ -28,14 +28,11 @@ $(document).on('pagecreate', '#releves', function () {
 
 
    $('#formReleveVente').on('change', function (event) {
-       // event.preventDefault();
-       console.log("connard");
+
        var dateMin = $('#dateMin').val();
        var dateMax = $('#dateMax').val();
 
        $('#downloadVente').prop('href', 'http://' + server + 'get_ventes.php?dateMin=' + dateMin + '&dateMax=' + dateMax);
-
-
     });
 
 
