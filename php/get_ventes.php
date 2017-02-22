@@ -24,7 +24,6 @@ if (!empty($_GET['dateMin']) && !empty($_GET['dateMax'])) {
 //    }
 
 
-//    var_dump($result);
 
     require 'inc/tfpdf.php';
     class PDF extends tFPDF
@@ -45,32 +44,47 @@ if (!empty($_GET['dateMin']) && !empty($_GET['dateMax'])) {
             }
         }
 
-
-
         // En-tête
         function Header()
         {
-
             $this->AddFont('DejaVu','','DejaVuSansCondensed.ttf',true);
             $this->SetFont('DejaVu','',10);
             // Décalage à droite
-//            $this->Cell(80);
+            // $this->Cell(80);
             // Titre
             $this->Cell(30,10,'Liste des ventes',1,0,'C');
             // Saut de ligne
             $this->Ln(20);
         }
+        function Footer()
+        {
+            // Positionnement à 1,5 cm du bas
+            $this->SetY(-15);
+            // Numéro de page
+            $this->Cell(0,10,$this->PageNo().'/{nb}',0,0,'C');
+        }
     }
 
-    $pdf = new PDF();
+    $pdf = new PDF('L', 'mm', 'A4');
     $pdf->AddFont('DejaVu','','DejaVuSansCondensed.ttf',true);
-    $pdf->SetFont('DejaVu','',8);
+    $pdf->SetFont('DejaVu','',10);
+    $pdf->AliasNbPages();
+    $pdf->AddPage();
 
-//    $pdf->SetFont('Courier','',8);
-    $pdf->AddPage(["L"]);
     $datemin = date_create($_GET['dateMin']);
     $datemax = date_create($_GET['dateMax']);
-    $pdf->SetTitle("Liste des ventes entre le " . date_format($datemin, 'd-m-Y') . " et le " . date_format($datemax, 'd-m-Y'), true);
+    $datemin = date_format($datemin, 'd-m-Y');
+    $datemax = date_format($datemax, 'd-m-Y');
+
+    $pdf->SetTitle('Liste des ventes entre le ' . $datemin . " et le " . $datemax, true);
+
+    $pdf->Write(5, 'Du ' . $datemin . ' au ' . $datemax);
+    $pdf->Ln();
+    $pdf->Ln();
+
+
+    $pdf->SetFont('DejaVu','',8);
+
     $header = array('N°vente','Date vente','N°client', 'Nom', 'Prénom', 'Nombre Ticket vert','Nombre Ticket rose','Nombre Ticket jaune', "Coût vente €");
     $pdf->BasicTable($header,$result);
     $pdf->Output();

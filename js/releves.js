@@ -23,7 +23,7 @@ $(document).on('pagecreate', '#releves', function () {
       $('#totalJaune').text(totalJaune);
       $('#totalVert').text(totalVert);
       $('#totalRose').text(totalRose);
-      $('#releveConso').append('<button type="" id="downloadPresence" class="ui-btn ui-btn-inline clr-primary">Télécharger le pdf</button>');
+      $('#releveConso').append('<a href="http://' + server + 'get_conso.php" target="_blank" id="downloadPresence" class="ui-btn ui-btn-inline clr-primary">Télécharger le pdf</a>');
   }
 
 
