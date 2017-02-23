@@ -54,6 +54,15 @@ $(document).on("pagecreate", "#mainmenu", function() {
     updateMain();
   });
 
+
+    $('#scanBtn').on('tap', function (event) {
+        if (!localStorage.liste) {
+            event.preventDefault();
+            toast("<b>Erreur : </b> impossible de trouver la liste de présence", 5000);
+        }
+    });
+
+
     
   $('#hourForm').on('submit', function (event) {
       event.preventDefault();

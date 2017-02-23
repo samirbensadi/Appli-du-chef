@@ -4,7 +4,6 @@ document.addEventListener('deviceready', function () {
             alert("Erreur : " + err);
         }
         if (status.authorized) {
-            toast('ok !!',3000);
 
         } else if (status.denied) {
 

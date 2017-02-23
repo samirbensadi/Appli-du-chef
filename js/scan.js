@@ -35,12 +35,8 @@ $(document).on('pagecreate', "#scan", function () {
     });
   }
 
-  if (localStorage.liste) {
-    QRScanner.show();
-    scan();
-  } else {
-    toast("<b>Erreur : </b>, impossible de trouver la liste de présence", 5000);
-  }
+  QRScanner.show();
+  scan();
 
 });
 
