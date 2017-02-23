@@ -13,8 +13,11 @@
          <div id="releveVente">
            <h3>Totaux des tickets vendus par couleur</h3>
             <form method="POST" action="#" id="formReleveVente">
-                <input type="date" name="dateMin" id="dateMin" value="" required>
-                <input type="date" name="dateMax" id="dateMax" value="" required>
+                <label for="dateMin">Date minimum:</label>
+                <input type="date" name="dateMin" id="dateMin" value="" placeholder="jj/mm/aaaa" required>
+
+                <label for="dateMax">Date maximum :</label>
+                <input type="date" name="dateMax" id="dateMax" value="" placeholder="jj/mm/aaaa" required>
                 <a href="#" id="downloadVente" class="ui-btn ui-btn-inline clr-primary" target="_blank">Télécharger le pdf</a>
             </form>
          </div>
