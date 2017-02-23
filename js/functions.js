@@ -4,6 +4,8 @@ var server = "localhost/Appli-du-chef/php/";
 var jours = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 var mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 
+
+
 // fonction pour quitter le service
 function disconnect() {
     localStorage.clear();
